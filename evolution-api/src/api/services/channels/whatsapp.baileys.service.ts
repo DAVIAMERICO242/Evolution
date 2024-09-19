@@ -1939,37 +1939,10 @@ export class BaileysStartupService extends ChannelStartupService {
 
       if (messageSent?.message?.extendedTextMessage) {
         const message = messageSent.message.extendedTextMessage.text;
-        recordCampaignOnSentMessage(
-          user_name,
-          connection_name,
-          'ignore',
-          messageSent.pushName || 'desconhecido',
-          target_phone,
-          message,
-          'evolution_bf_send',
-        );
       } else if (messageSent?.message?.imageMessage) {
         const message = messageSent.message.imageMessage.caption;
-        recordCampaignOnSentMessage(
-          user_name,
-          connection_name,
-          'ignore',
-          messageSent.pushName || 'desconhecido',
-          target_phone,
-          message,
-          'evolution_bf_send',
-        );
       } else if (messageSent?.message?.videoMessage) {
         const message = messageSent.message.videoMessage.caption;
-        recordCampaignOnSentMessage(
-          user_name,
-          connection_name,
-          'ignore',
-          messageSent.pushName || 'desconhecido',
-          target_phone,
-          message,
-          'evolution_bf_send',
-        );
       }
       //DAVI AREA
 
